@@ -8,3 +8,5 @@ The project is bootstrapped with React/Redux, Typescript and Tailwind CSS.
 
 # Deployed in
 https://news-app-entry.vercel.app/
+
+![news-app](https://user-images.githubusercontent.com/29465570/177689790-ae31d61d-ab4c-4a79-861e-14204542e713.JPG)
