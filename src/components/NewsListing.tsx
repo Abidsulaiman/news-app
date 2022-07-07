@@ -11,7 +11,7 @@ function NewsListing() {
     <div className="news__listing">
       {data?.articles?.map((news: any, idx: number) => (
         <article
-          className="flex items-center space-x-10 bg-gray-800 p-6 mb-4 hover:shadow-xl rounded-lg transition-shadow ease-in-out duration-300 w-full"
+          className="flex flex-col-reverse lg:flex-row lg:items-center lg:space-x-10 bg-gray-800 p-6 mb-4 hover:shadow-xl rounded-lg transition-shadow ease-in-out duration-300 w-full"
           key={idx}
         >
           <div className="flex-1">
@@ -20,11 +20,11 @@ function NewsListing() {
               {news?.content}
             </p>
 
-            <div className="text-sm mt-6 flex items-center">
-              <span className="text-teal-600 font-semibold">
+            <div className="text-sm mt-6 flex flex-col lg:flex-row items-center">
+              <span className="text-teal-600 font-semibold mb-2 lg:mb-0">
                 {news?.author}
               </span>
-              <FaCircle className="mx-2 w-2 h-2 text-teal-600" />
+              <FaCircle className="mx-2 w-2 h-2 text-teal-600 hidden lg:block" />
               <span className="text-gray-200">
                 Published at {new Date(news?.publishedAt)?.toLocaleDateString()}
               </span>
@@ -32,7 +32,7 @@ function NewsListing() {
           </div>
           <img
             src={news?.urlToImage ?? "/logo512.png"}
-            className="w-44 h-44 rounded object-cover border"
+            className="w-full lg:w-44 lg:h-44 rounded object-cover mb-4"
             alt="news pic"
           />
         </article>
