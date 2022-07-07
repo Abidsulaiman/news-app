@@ -18,7 +18,7 @@ function Header() {
   useEffect(() => {
     // dispatch action
     dispatch(fetchNews({ searchTerm, country: country?.code }));
-    dispatch(fetchWeather({ country: country?.name?.toLowerCase() }));
+    dispatch(fetchWeather({ city: country?.city?.toLowerCase() }));
   }, [searchTerm || country]);
 
   return (

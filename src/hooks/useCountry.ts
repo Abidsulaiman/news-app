@@ -5,6 +5,7 @@ function useCountry() {
   const [country, setCountry] = useState({
     name: "",
     code: "",
+    city: "",
   });
 
   useEffect(() => {
@@ -17,6 +18,7 @@ function useCountry() {
           setCountry({
             name: data.country_name,
             code: data.country_code,
+            city: data.city,
           });
         })
         .catch((error) => {
