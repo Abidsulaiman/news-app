@@ -17,12 +17,12 @@ const initialState: NewsState = {
 export const fetchNews = createAsyncThunk(
   "news/fetch",
   async (
-    payload: { searchTerm: String; country: String },
+    payload: { searchTerm: String; lang: String },
     { rejectWithValue, getState, dispatch }
   ) => {
     try {
       const { data } = await axios.get(
-        `https://newsapi.org/v2/top-headlines?q=${payload?.searchTerm}&sortBy=publishedAt&country=${payload?.country}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+        `https://newsapi.org/v2/everything?q=${payload?.searchTerm}&sortBy=publishedAt&language=${payload?.lang}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
       );
       return data;
     } catch (error: any) {
