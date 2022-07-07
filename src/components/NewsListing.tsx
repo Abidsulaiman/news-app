@@ -9,6 +9,9 @@ function NewsListing() {
 
   return (
     <div className="news__listing">
+      <p className="mb-4 text-gray-500">
+        Found {data?.totalResults} news articles
+      </p>
       {data?.articles?.map((news: any, idx: number) => (
         <article
           className="flex flex-col-reverse lg:flex-row lg:items-center lg:space-x-10 bg-gray-800 p-6 mb-4 hover:shadow-xl rounded-lg transition-shadow ease-in-out duration-300 w-full"
